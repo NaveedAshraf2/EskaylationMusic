@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ads"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back_white" />
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/bg_edittext"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/san_light"
+                    android:gravity="center|left"
+                    android:hint="@string/txt_search"
+                    android:imeActionLabel="@string/txt_search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textCapSentences"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingRight="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_search_white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_empty"
+                style="@style/MenuStyle"
+                android:layout_marginTop="50.0dip"
+                android:drawableTop="@drawable/empty"
+                android:gravity="center"
+                android:text="@string/txt_no_search_result"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:id="@+id/rv_search_complete"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:divider="@color/white"
+                android:dividerHeight="0.5dip"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/viewPlayer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/viewPlayer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:indicatorColor="@color/white"
+                app:indicatorName="LineSpinFadeLoaderIndicator"
+                app:layout_constraintBottom_toTopOf="@+id/viewPlayer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.eskaylation.downloadmusic.widget.PlayerView
+                android:id="@+id/viewPlayer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bottom"
+                tools:ignore="MissingConstraints" />
+
+            <FrameLayout
+                android:id="@+id/bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <FrameLayout
+                    android:id="@+id/ad_view_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

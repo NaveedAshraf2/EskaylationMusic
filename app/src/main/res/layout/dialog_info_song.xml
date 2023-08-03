@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="#9C27B0"
+    android:maxWidth="450.0dip">
+
+    <ImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="100.0dip"
+        android:layout_height="100.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_8"
+        android:src="@drawable/song_not_found"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_thumb"
+        android:layout_margin="@dimen/_16sdp"
+        android:fontFamily="@font/san_regular"
+        android:padding="@dimen/dp_8"
+        android:text="@string/tit_song"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16" />
+</RelativeLayout>

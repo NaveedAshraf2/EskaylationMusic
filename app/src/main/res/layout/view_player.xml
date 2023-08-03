@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_player"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#D89C27B0"
+    android:gravity="center"
+    android:alpha=".8"
+    android:layoutDirection="ltr">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        app:lottie_colorFilter="#FFEB3B"
+        app:lottie_repeatMode="reverse"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splash_music" />
+
+
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:src="@drawable/song_not_found"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayPauseSmall"
+        app:layout_constraintStart_toEndOf="@+id/img_thumb"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_name_small"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_time_artist"
+            app:layout_constraintEnd_toStartOf="@+id/btnPriveSmall"
+            app:layout_constraintStart_toEndOf="@+id/img_thumb"
+            app:layout_constraintTop_toTopOf="@+id/btnPriveSmall" />
+
+        <TextView
+            android:id="@+id/tv_time_artist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPriveSmall"
+            app:layout_constraintEnd_toStartOf="@+id/btnPriveSmall"
+            app:layout_constraintStart_toEndOf="@+id/img_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_small" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnPriveSmall"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:background="?selectableItemBackground"
+        android:padding="16.0dip"
+        android:src="@drawable/ic_prive"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayPauseSmall"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlayPauseSmall"
+        app:layout_constraintTop_toTopOf="@+id/btnPlayPauseSmall" />
+
+    <ImageView
+        android:id="@+id/btnPlayPauseSmall"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:background="?selectableItemBackground"
+        android:padding="8.0dip"
+        android:elevation="10dp"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNextSmall"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/btnNextSmall"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:background="?selectableItemBackground"
+        android:padding="16.0dip"
+        android:src="@drawable/ic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayPauseSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnPlayPauseSmall" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

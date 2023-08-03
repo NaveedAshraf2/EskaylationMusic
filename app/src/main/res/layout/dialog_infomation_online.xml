@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    android:orientation="vertical"
+    android:backgroundTint="#C84DDD"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="8.0dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentRight="true"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_close" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:src="@drawable/song_not_found" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_thumb"
+            android:fontFamily="@font/san_bold"
+            android:gravity="center"
+            android:padding="8.0dip"
+            android:text="@string/txt_song_infomation"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/stroke_gray"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_thumb"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/san_bold"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_title"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_light"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_title"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_bold"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/tit_artist"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_artist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_2"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_light"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_title"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_artist"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_bold"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_publish_at"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_publishAt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_3"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_light"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_title"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_publishAt"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/san_bold"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_duration_time"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/tv_Duration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_4"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:fontFamily="@font/san_light"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/txt_title"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

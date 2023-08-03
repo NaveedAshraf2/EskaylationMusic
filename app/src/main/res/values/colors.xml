@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="my_pink">#BC24D6</color>
+    <color name="black">#ff000000</color>
+    <color name="black_new">#ff515151</color>
+    <color name="black_tsp_10">#1a000000</color>
+    <color name="black_tsp_20">#33000000</color>
+    <color name="black_tsp_30">#4d000000</color>
+    <color name="black_tsp_50">#80000000</color>
+    <color name="bootstrap_alert_cross_default">#64818a91</color>
+    <color name="bootstrap_brand_danger">#0384F4</color>
+    <color name="bootstrap_brand_info">#ff5bc0de</color>
+    <color name="bootstrap_brand_primary">#ff0275d8</color>
+    <color name="bootstrap_brand_secondary_border">#ffcccccc</color>
+    <color name="bootstrap_brand_secondary_fill">#ffffffff</color>
+    <color name="bootstrap_brand_secondary_text">#ff373a3c</color>
+    <color name="bootstrap_brand_success">#ff5cb85c</color>
+    <color name="bootstrap_brand_warning">#fff0ad4e</color>
+    <color name="bootstrap_dropdown_divider">#ffe7e7e7</color>
+    <color name="bootstrap_edittext_disabled">#ffe0e0e0</color>
+    <color name="bootstrap_gray">#ff55595c</color>
+    <color name="bootstrap_gray_dark">#ff373a3c</color>
+    <color name="bootstrap_gray_light">#ff818a91</color>
+    <color name="bootstrap_gray_lighter">#ffeceeef</color>
+    <color name="bootstrap_gray_lightest">#fff7f7f9</color>
+    <color name="bootstrap_thumbnail_background">#ffffffff</color>
+    <color name="bootstrap_well_background">#fff5f5f5</color>
+    <color name="bootstrap_well_border_color">#ffe7e7e7</color>
+
+    <color name="cardview_dark_background">#ff424242</color>
+    <color name="cardview_light_background">#ffffffff</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+
+    <color name="colorPrimary">#010A0F</color>
+    <color name="colorPrimaryDark">#055DF5</color>
+    <color name="color_accept">#0384F4</color>
+
+    <color name="color_btn_cancel">#00E2FF</color>
+    <color name="color_spotify">#96F3FF</color>
+    <color name="defaultTextColor">#ffffffff</color>
+    <color name="default_thumb_color">#96F3FF</color>
+    <color name="design_bottom_navigation_shadow_color">#14000000</color>
+    <color name="design_dark_default_color_background">#ff121212</color>
+    <color name="design_dark_default_color_error">#ffcf6679</color>
+    <color name="design_dark_default_color_on_background">#ffffffff</color>
+    <color name="design_dark_default_color_on_error">#ff000000</color>
+    <color name="design_dark_default_color_on_primary">#ff000000</color>
+    <color name="design_dark_default_color_on_secondary">#ff000000</color>
+    <color name="design_dark_default_color_on_surface">#ffffffff</color>
+    <color name="design_dark_default_color_primary">#ffba86fc</color>
+    <color name="design_dark_default_color_primary_dark">#ff000000</color>
+    <color name="design_dark_default_color_primary_variant">#ff3700b3</color>
+    <color name="design_dark_default_color_secondary">#ff03dac6</color>
+    <color name="design_dark_default_color_secondary_variant">#ff03dac6</color>
+    <color name="design_dark_default_color_surface">#ff121212</color>
+    <color name="design_default_color_background">#ffffffff</color>
+    <color name="design_default_color_error">#0384F4</color>
+    <color name="design_default_color_on_background">#ff000000</color>
+    <color name="design_default_color_on_error">#ffffffff</color>
+    <color name="design_default_color_on_primary">#ffffffff</color>
+    <color name="design_default_color_on_secondary">#ff000000</color>
+    <color name="design_default_color_on_surface">#ff000000</color>
+    <color name="design_default_color_primary">#ff6200ee</color>
+    <color name="design_default_color_primary_dark">#ff3700b3</color>
+    <color name="design_default_color_primary_variant">#ff3700b3</color>
+    <color name="design_default_color_secondary">#ff03dac6</color>
+    <color name="design_default_color_secondary_variant">#ff018786</color>
+    <color name="design_default_color_surface">#ffffffff</color>
+    <color name="design_fab_shadow_end_color">@android:color/transparent</color>
+    <color name="design_fab_shadow_mid_color">#14000000</color>
+    <color name="design_fab_shadow_start_color">#44000000</color>
+    <color name="design_fab_stroke_end_inner_color">#0a000000</color>
+    <color name="design_fab_stroke_end_outer_color">#0f000000</color>
+    <color name="design_fab_stroke_top_inner_color">#1affffff</color>
+    <color name="design_fab_stroke_top_outer_color">#2effffff</color>
+    <color name="design_snackbar_background_color">#ff323232</color>
+
+    <color name="end_gradient">#ff85b2ff</color>
+    <color name="errorColor">#0384F4</color>
+
+    <color name="exo_edit_mode_background_color">#fff4f3f0</color>
+    <color name="exo_error_message_background_color">#aa000000</color>
+
+    <color name="gnt_blue">#ff1ed760</color>
+    <color name="gnt_gray">#ff808080</color>
+    <color name="gnt_white">#ffffffff</color>
+    <color name="gray">#ff797979</color>
+    <color name="gray_border">#ffe6e6e6</color>
+    <color name="gray_txt">#ff484848</color>
+
+    <color name="infoColor">#ff3f51b5</color>
+
+    <color name="normalColor">#ff353a3e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
+
+    <color name="round_corner_progress_bar_background_default">#ff5f5f5f</color>
+    <color name="round_corner_progress_bar_progress_default">#ff7f7f7f</color>
+    <color name="round_corner_progress_bar_secondary_progress_default">@android:color/transparent</color>
+
+    <color name="start_gradient">#ff6c71ea</color>
+    <color name="successColor">#ff388e3c</color>
+    <color name="text_primary">#ff5b5b5b</color>
+    <color name="text_title">#ff000000</color>
+    <color name="time_hide">#ffbfbdbd</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="warningColor">#ffffa900</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_tsp_30">#4dffffff</color>
+
+
+    <color name="window_status_color">#00000000</color>
+
+</resources>

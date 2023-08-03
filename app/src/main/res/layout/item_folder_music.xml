@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:backgroundTint="#CB09EC"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:padding="10.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/music_folder"
+            app:layout_constraintBottom_toBottomOf="@+id/line_space"
+            app:layout_constraintEnd_toStartOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/san_semibold"
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_thumb"
+            app:layout_constraintTop_toTopOf="@+id/img_thumb"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:id="@+id/tv_count_song"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="03:30:04 - Oke babe"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <View
+            android:id="@+id/line_space"
+            android:layout_width="0.0dip"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="#ffcccccc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_thumb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

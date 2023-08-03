@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/downloadView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#9C27B0"
+    android:gravity="center"
+    android:alpha=".8"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/san_bold"
+        android:gravity="center"
+        android:padding="8.0dip"
+        android:text="@string/downloading"
+        android:textColor="@color/white"
+        android:textSize="26.0sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/white"
+        app:lottie_fileName="downloading.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.25" />
+
+    <TextView
+        android:id="@+id/tvProgressDownload"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/san_regular"
+        android:gravity="center"
+        android:text="@string/waiting_txt"
+        android:textColor="@color/white"
+        android:textSize="20.0sp" />
+
+    <Button
+        android:id="@+id/btnCancelDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:backgroundTint="#C909EA"
+        android:text="@string/txt_cancel"
+        android:textColor="@color/white" />
+</LinearLayout>

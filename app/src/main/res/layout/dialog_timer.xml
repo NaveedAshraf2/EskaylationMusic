@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    android:background="#673AB7">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_title_gradient"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/timer_music"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/sw_timmer"
+            android:layout_width="40.0dip"
+            android:layout_height="35.0dip"
+            android:background="@drawable/bg_switch"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:thumb="@android:color/transparent"
+            android:track="@android:color/transparent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_default"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_8"
+        android:text="@string/time_default"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/time_default">
+
+        <RadioButton
+            android:id="@+id/rd_5p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="5'"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rd_15p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="15'"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rd_30p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="30'"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rd_60p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="60'"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rd_120p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="120'"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@drawable/gradient_background"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+</androidx.constraintlayout.widget.ConstraintLayout>

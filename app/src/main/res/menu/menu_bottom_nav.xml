@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/online_search"
+        android:title="Online musics"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_search"/>
+
+    <item android:id="@+id/album"
+        android:title="Album"
+        android:iconTint="@color/white"
+        android:icon="@drawable/baseline_album_24"/>
+
+    <item android:id="@+id/music"
+        android:title="Musics"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_music"/>
+
+    <item android:id="@+id/artist"
+        android:title="Artist"
+        android:iconTint="@color/white"
+        android:icon="@drawable/artist_item_icon"/>
+
+    <item android:id="@+id/playlist"
+        android:title="Play List"
+        android:iconTint="@color/white"
+        android:icon="@drawable/baseline_playlist_play_24"/>
+
+
+
+</menu>

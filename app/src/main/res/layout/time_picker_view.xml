@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="@dimen/dp_8">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/san_semibold"
+            android:gravity="center"
+            android:padding="@dimen/dp_16"
+            android:text="@string/chose_time"
+            android:textColor="@color/black"
+            android:textSize="22.0sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/border_time_picker"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHour"
+                android:layout_width="0.0dip"
+                android:layout_height="165.0dip"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/black"
+                android:textSize="40.0sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMinute"
+                android:layout_width="0.0dip"
+                android:layout_height="165.0dip"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:fontFamily="@font/san_thin"
+                android:gravity="center"
+                android:text="@string/minute"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:fontFamily="@font/san_thin"
+                android:gravity="center"
+                android:text="@string/second"
+                android:textColor="@color/text_primary"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/gray_border"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:background="#ffe3ebfa"
+                android:fontFamily="@font/san_thin"
+                android:padding="@dimen/dp_16"
+                android:text="@string/txt_cancel"
+                android:textAllCaps="false"
+                android:textSize="18.0sp"
+                app:layout_constraintEnd_toStartOf="@+id/centerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/centerView"
+                android:layout_width="0.5dip"
+                android:layout_height="0.0dip"
+                android:background="@color/gray_border"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCancel"
+                app:layout_constraintEnd_toStartOf="@+id/btnChose"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnChose"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:background="#ff007aff"
+                android:fontFamily="@font/san_thin"
+                android:padding="@dimen/dp_16"
+                android:text="@string/chose"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18.0sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/centerView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

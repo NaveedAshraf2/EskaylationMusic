@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24.0dip"
+    android:background="@color/my_pink"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:fontFamily="@font/san_light"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22sdp"
+        android:gravity="center"
+        android:text="@string/txt_ask_delete" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/border_button_alpha"
+            android:fontFamily="@font/san_bold"
+            android:text="@string/txt_no"
+            android:layout_margin="@dimen/_4sdp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_margin="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/border_button_alpha"
+            android:fontFamily="@font/san_light"
+            android:text="@string/yes" />
+
+    </LinearLayout>
+</LinearLayout>

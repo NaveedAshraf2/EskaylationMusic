@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ads"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="fill_parent"
+                android:layout_height="?android:actionBarSize"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back_white" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/san_bold"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="8.0dip"
+                    android:text="22222"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <ImageButton
+                    android:id="@+id/btnAddSong"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_add_new_playlist"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_play_all"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24.0dip"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginRight="24.0dip"
+                android:background="@drawable/border_button_playall"
+                android:fontFamily="@font/san_bold"
+                android:text="@string/txt_play_all"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_listSong"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                app:layout_constraintBottom_toTopOf="@+id/ad_view_container"
+                app:layout_constraintTop_toBottomOf="@+id/btn_play_all" />
+
+            <FrameLayout
+                 android:id="@+id/ad_view_container"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    app:cardBackgroundColor="#B435CA"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="@dimen/dp_8">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/playstore_update"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/btnDownload"
+            android:layout_width="200.0dip"
+            android:layout_height="200.0dip"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_fileName="update.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1.25" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16.0dip"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="@dimen/dp_8"
+            android:text="@string/update_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16.0sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:fontFamily="@font/san_bold"
+            android:padding="@dimen/dp_16"
+            android:text="@string/update"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18.0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

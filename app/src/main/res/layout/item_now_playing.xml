@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="#BA21D5"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginLeft="@dimen/dp_8"
+            app:cardCornerRadius="2dp"
+            android:layout_marginRight="@dimen/dp_8"
+            android:backgroundTint="#BA21D5"
+            app:layout_constraintBottom_toBottomOf="@+id/line_space"
+            app:layout_constraintEnd_toStartOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_thumb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/song_not_found"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/san_medium"
+            android:singleLine="true"
+            android:text="sssss"
+            android:textColor="@color/white"
+            android:textSize="14.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDrag"
+            app:layout_constraintStart_toEndOf="@+id/card"
+            app:layout_constraintTop_toTopOf="@+id/card"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/san_thin"
+            android:singleLine="true"
+            android:text="sssss"
+            android:textColor="@color/white"
+            android:textSize="10.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDrag"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            app:layout_constraintVertical_bias="0.25" />
+        <ImageView
+            android:id="@+id/btnDrag"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:padding="8.0dip"
+            android:src="@drawable/ic_drag"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/line_space"
+            android:layout_width="0.0dip"
+            android:layout_height="0.5dip"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="#ffcccccc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

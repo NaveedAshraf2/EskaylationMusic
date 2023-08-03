@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ads"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progress"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btnPerrmission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ic_permission.json"
+                app:lottie_loop="true"
+                app:lottie_speed="1.25" />
+
+            <Button
+                android:id="@+id/btnPerrmission"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_margin="16.0dip"
+                android:background="@drawable/border_button_alpha"
+                android:clickable="false"
+                android:paddingLeft="24.0dip"
+                android:paddingRight="24.0dip"
+                android:text="@string/get_permission"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tabIndicatorGravity="center"
+                app:tabIndicatorHeight="0.0dip" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

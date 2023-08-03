@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical|center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/gitar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:text="Flow Downloader"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:tint="@color/white"
+            android:backgroundTint="@color/white"
+            android:foregroundTint="@color/white"
+            app:lottie_colorFilter="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_90sdp"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="89dp"
+            android:layout_marginBottom="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/spalsh"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_above="@+id/lottieAnimationView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:lottie_repeatMode="reverse"
+            android:layout_gravity="center"
+            app:lottie_colorFilter="@color/white"
+            android:layout_marginStart="-4dp"
+            android:tint="@color/white"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="214dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/splash_music" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/updates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This App is Not Available"
+            android:textColor="#DD2C00"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="46dp"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:layout_below="@id/updates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update your app to the latest version OR Download App!"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo" />
+
+        <Button
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Update/Download Now>>"
+            android:background="#0384F4"
+            app:indicatorColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

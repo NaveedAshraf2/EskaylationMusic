@@ -1,0 +1,3 @@
+include ':app'
+//,':blurry'
+rootProject.name = "EskaylationMusic"

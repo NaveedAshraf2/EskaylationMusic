@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    android:background="#9C27B0"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_playlist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:fontFamily="@font/san_semibold"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/new_playlist"
+        android:textColor="@color/text_title"
+        android:textSize="20.0sp" />
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:background="@drawable/stroke_gray"
+        android:fontFamily="@font/san_thin"
+        android:hint="@string/enter_name_playlist"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:textColorHint="#F1ECEC"
+        android:paddingStart="10dp"
+        android:paddingVertical="12dp"
+        android:textColor="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/tv_cancel"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="13dp"
+            android:backgroundTint="#61FAFAFA"
+            android:background="@drawable/stroke_gray"
+            android:fontFamily="@font/san_thin"
+            android:padding="@dimen/dp_16"
+            android:text="@string/txt_cancel"
+            android:textAllCaps="false"
+            android:textSize="16.0sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/centerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="0.5dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_cancel"
+            app:layout_constraintEnd_toStartOf="@+id/tv_create"
+            app:layout_constraintStart_toEndOf="@+id/tv_cancel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/tv_create"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:backgroundTint="#61FAFAFA"
+            android:fontFamily="@font/san_thin"
+            android:padding="@dimen/dp_16"
+            android:text="@string/txt_accept"
+            android:layout_margin="13dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/stroke_gray"
+            android:textSize="16.0sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/centerView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

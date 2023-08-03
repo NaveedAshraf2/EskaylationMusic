@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#9C27B0" />
+        </shape>
+    </item>
+    <item android:gravity="fill" android:height="580.0dip" android:width="580.0dip">
+        <bitmap android:gravity="center" android:src="@drawable/song_not_found" />
+    </item>
+</layer-list>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="ltr">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/navigation"
+            android:layout_gravity="start"
+            android:background="@drawable/main_back">
+            <include layout="@layout/custom_menu_main" />
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <View
+        android:id="@+id/plashLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plash" />
+</FrameLayout>
+
+</layout>
